@@ -16,7 +16,7 @@ export function Hero() {
               Building production web apps end-to-end.
             </p>
             <p className="mt-7 max-w-[560px] text-[17px] leading-[1.6] text-fg2">
-              4+ years shipping for enterprise and startup clients —
+              5+ years shipping for enterprise and startup clients —
               architecture to delivery, solo or embedded in cross-functional
               teams. Comfortable as the sole engineer, and a mentor in larger
               ones.
