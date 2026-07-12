@@ -10,6 +10,11 @@ Personal portfolio for Michal Schneedorfer (fullstack developer). Its goal: land
 
 `docs/cv.md` is the source of truth for all portfolio content (extracted from `public/cv.pdf`). Don't invent facts — pull from it. Omit the old portfolio URL it references.
 
+# Design
+
+- Visual source of truth is the Claude Design mockup: https://claude.ai/design/p/5dd39402-a826-4e24-b96e-999a7b6bb8cb?file=Portfolio.dc.html (read it with the DesignSync tool: `get_file`, projectId `5dd39402-a826-4e24-b96e-999a7b6bb8cb`, path `Portfolio.dc.html`).
+- `docs/wireframe.md` documents the mockup's structure, tokens, and responsive rules — consult it before building or changing UI.
+
 # Conventions
 
 - Use shadcn/ui components where possible (Base UI primitives, not Radix). Add missing ones with `pnpm dlx shadcn add <name>`.
