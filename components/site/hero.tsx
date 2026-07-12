@@ -19,7 +19,10 @@ export function Hero() {
               {"// availability"}
             </p>
             <p className="mt-1.5 flex items-center gap-2 text-[13.5px] font-medium">
-              <span className="size-[7px] rounded-full bg-accent-green motion-safe:animate-pulse" />
+              <span
+                aria-hidden
+                className="size-[7px] rounded-full bg-accent-green motion-safe:animate-pulse"
+              />
               Remote B2B · 4+ hrs US overlap
             </p>
           </div>

@@ -1,9 +1,12 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+
 export function ThemeToggle() {
   return (
-    <button
-      type="button"
+    <Button
+      variant="chip"
+      size="icon"
       aria-label="Toggle theme"
       onClick={() => {
         const isDark = document.documentElement.classList.toggle("dark");
@@ -11,10 +14,13 @@ export function ThemeToggle() {
           localStorage.setItem("theme", isDark ? "dark" : "light");
         } catch {}
       }}
-      className="flex h-[30px] w-[34px] cursor-pointer items-center justify-center border border-chip-border text-sm hover:border-strong"
     >
-      <span className="dark:hidden">☾</span>
-      <span className="hidden dark:inline">☀</span>
-    </button>
+      <span aria-hidden className="dark:hidden">
+        ☾
+      </span>
+      <span aria-hidden className="hidden dark:inline">
+        ☀
+      </span>
+    </Button>
   );
 }

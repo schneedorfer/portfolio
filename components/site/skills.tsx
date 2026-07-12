@@ -1,4 +1,4 @@
-import { skills, workflow } from "@/lib/content";
+import { skillGroups, workflow } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { SectionLabel } from "@/components/site/section-label";
 
@@ -11,17 +11,26 @@ export function Skills() {
           className="scroll-mt-[70px] px-5 pt-16 pb-10 md:border-r md:border-hairline md:px-12 md:pb-16"
         >
           <SectionLabel>03 — skills</SectionLabel>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className={cn(
-                  "border border-chip-border bg-chip-bg px-2.5 py-[5px] font-mono text-[12.5px] font-medium",
-                  skill === "TypeScript" && "border-strong",
-                )}
-              >
-                {skill}
-              </span>
+          <div className="grid gap-5">
+            {skillGroups.map((group) => (
+              <div key={group.label}>
+                <p className="mb-2 font-mono text-[11.5px] text-muted-foreground">
+                  {`// ${group.label}`}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className={cn(
+                        "border border-chip-border bg-chip-bg px-2.5 py-[5px] font-mono text-[12.5px] font-medium",
+                        skill === "TypeScript" && "border-strong",
+                      )}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -29,12 +38,17 @@ export function Skills() {
           <SectionLabel>04 — how_i_work</SectionLabel>
           <div className="font-mono text-[13px] leading-[1.9] text-fg2">
             <p>
-              <span className="text-muted-foreground">$</span> nvim + tmux +
-              claude-code
+              <span aria-hidden className="text-muted-foreground">
+                $
+              </span>{" "}
+              nvim + tmux + claude-code
             </p>
             {workflow.map((item) => (
               <p key={item}>
-                <span className="text-accent-green">✓</span> {item}
+                <span aria-hidden className="text-accent-green">
+                  ✓
+                </span>{" "}
+                {item}
               </p>
             ))}
           </div>

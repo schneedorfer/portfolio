@@ -1,8 +1,10 @@
-# Website Wireframe
+# Website Wireframe (v1 mockup — historical)
 
-Derived from the Claude Design mockup — the visual source of truth:
-**https://claude.ai/design/p/5dd39402-a826-4e24-b96e-999a7b6bb8cb?file=Portfolio.dc.html**
-(readable via the DesignSync tool: `get_file` with projectId `5dd39402-a826-4e24-b96e-999a7b6bb8cb`, path `Portfolio.dc.html`)
+> **Status: superseded.** This documents the original Claude Design mockup the site was built from:
+> **https://claude.ai/design/p/5dd39402-a826-4e24-b96e-999a7b6bb8cb?file=Portfolio.dc.html**
+> (readable via the DesignSync tool: `get_file` with projectId `5dd39402-a826-4e24-b96e-999a7b6bb8cb`, path `Portfolio.dc.html`)
+>
+> The implementation has since evolved past it (e.g. brighter dark-mode hairlines, a 5th work row, CV link in the nav, OG/SEO metadata). **The code is now the source of truth** — tokens in `app/globals.css`, components in `components/site/`. Where this document disagrees with the code, the code wins.
 
 Content facts come from `docs/cv.md` — never invent copy.
 

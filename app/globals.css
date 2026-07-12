@@ -103,8 +103,8 @@
   --background: #09090b;
   --foreground: #fafafa;
   --fg2: #d4d4d8;
-  --hairline2: #18181b;
-  --nav-rule: #27272a;
+  --hairline2: #1f1f23;
+  --nav-rule: #3f3f46;
   --strong: #fafafa;
   --chip-bg: #131316;
   --chip-border: #27272a;
@@ -122,7 +122,7 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: #1c1c1f;
+  --border: #27272a;
   --input: oklch(1 0 0 / 15%);
   color-scheme: dark;
   --ring: oklch(0.556 0 0);
@@ -147,8 +147,16 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Theme-switch fade — borders and chip backgrounds included, so hairlines
+     don't snap while the page background transitions. Hover utilities
+     (transition-colors) override this per element. */
+  *,
+  ::before,
+  ::after {
     transition:
       background-color 0.25s ease,
+      border-color 0.25s ease,
       color 0.25s ease;
   }
   html {
@@ -159,7 +167,9 @@
     html {
       scroll-behavior: auto;
     }
-    body {
+    *,
+    ::before,
+    ::after {
       transition: none;
     }
   }

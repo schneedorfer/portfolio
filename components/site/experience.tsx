@@ -11,7 +11,10 @@ export function Experience() {
             key={job.role}
             className="grid gap-3 pb-7 not-last:border-b not-last:border-hairline2 not-first:pt-7 sm:grid-cols-[56px_1fr] sm:gap-6"
           >
-            <p className="font-mono text-xs font-medium text-muted-foreground opacity-55">
+            <p
+              aria-hidden
+              className="hidden font-mono font-medium text-muted-foreground opacity-55 sm:block"
+            >
               ▸
             </p>
             <div className="grid gap-2 md:grid-cols-[1fr_200px] md:gap-6">

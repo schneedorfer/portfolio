@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { email, siteUrl, socials } from "@/lib/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,10 +13,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Michal Schneedorfer — Fullstack Developer";
+const description =
+  "Fullstack developer with 4+ years shipping production web apps — React, Next.js, Node.js. Available for B2B contract engagements.";
+
 export const metadata: Metadata = {
-  title: "Michal Schneedorfer — Fullstack Developer",
-  description:
-    "Fullstack developer with 4+ years shipping production web apps — React, Next.js, Node.js. Available for B2B contract engagements.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "michal.dev",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Michal Schneedorfer",
+  jobTitle: "Fullstack Developer",
+  email: `mailto:${email}`,
+  url: siteUrl,
+  sameAs: socials.map((social) => social.href),
 };
 
 export default function RootLayout({
@@ -36,8 +65,14 @@ export default function RootLayout({
             __html: `try{if(localStorage.getItem("theme")!=="light")document.documentElement.classList.add("dark")}catch(e){document.documentElement.classList.add("dark")}`,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body id="top" className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }

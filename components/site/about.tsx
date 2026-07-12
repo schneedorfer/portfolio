@@ -8,12 +8,10 @@ export function About() {
         <SectionLabel>05 — about</SectionLabel>
         <div className="grid gap-8 md:grid-cols-[1fr_340px] md:gap-12">
           <p className="max-w-[640px] text-base leading-[1.7] text-fg2">
-            I own features end-to-end and I&apos;m comfortable as the sole
-            engineer on a product or as a mentor within a larger team. MSc in
-            Software Engineering from Masaryk University — top 9% of my cohort,
-            merit scholarship for outstanding students of the Faculty of
-            Informatics. Always exploring modern tools, frameworks, and
-            developer workflows.
+            MSc in Software Engineering from Masaryk University — top 9% of my
+            cohort, with a merit scholarship for outstanding students of the
+            Faculty of Informatics. Away from client work I&apos;m always
+            exploring modern tools, frameworks, and developer workflows.
           </p>
           <div className="border border-chip-border p-5">
             <p className="mb-2.5 font-mono text-[11.5px] text-muted-foreground">

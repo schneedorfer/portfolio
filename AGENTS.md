@@ -12,8 +12,9 @@ Personal portfolio for Michal Schneedorfer (fullstack developer). Its goal: land
 
 # Design
 
-- Visual source of truth is the Claude Design mockup: https://claude.ai/design/p/5dd39402-a826-4e24-b96e-999a7b6bb8cb?file=Portfolio.dc.html (read it with the DesignSync tool: `get_file`, projectId `5dd39402-a826-4e24-b96e-999a7b6bb8cb`, path `Portfolio.dc.html`).
-- `docs/wireframe.md` documents the mockup's structure, tokens, and responsive rules — consult it before building or changing UI.
+- **The implemented code is the visual source of truth** — tokens in `app/globals.css`, components in `components/site/`. The site has evolved past the original mockup; don't "fix" the code back toward it.
+- The Claude Design mockup was the v1 starting point, kept for historical reference only: https://claude.ai/design/p/5dd39402-a826-4e24-b96e-999a7b6bb8cb?file=Portfolio.dc.html (readable via DesignSync `get_file`, projectId `5dd39402-a826-4e24-b96e-999a7b6bb8cb`, path `Portfolio.dc.html`).
+- `docs/wireframe.md` documents that v1 mockup — still useful for layout intent, but where it disagrees with the code, the code wins.
 
 # Conventions
 
