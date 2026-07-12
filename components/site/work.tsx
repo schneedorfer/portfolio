@@ -1,4 +1,4 @@
-import { projects } from "@/lib/content";
+import { personalProjects, projects } from "@/lib/content";
 import { SectionLabel } from "@/components/site/section-label";
 
 export function Work() {
@@ -33,10 +33,49 @@ export function Work() {
                     {project.stack}
                   </span>
                 )}
+                {project.links?.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         ))}
+        <div className="pt-9">
+          <p className="mb-4 font-mono text-[11.5px] text-muted-foreground">
+            {"// personal_projects"}
+          </p>
+          <div className="grid gap-7 sm:grid-cols-2 sm:gap-6">
+            {personalProjects.map((project) => (
+              <div key={project.title}>
+                <div className="flex flex-wrap items-baseline gap-3">
+                  <h3 className="text-[17px] font-semibold">{project.title}</h3>
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    github ↗
+                  </a>
+                </div>
+                <p className="mt-2 max-w-[480px] text-[14px] leading-[1.6] text-fg2">
+                  {project.description}
+                </p>
+                <p className="mt-2.5 font-mono text-xs text-muted-foreground">
+                  {project.stack}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

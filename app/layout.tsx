@@ -70,7 +70,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
-      <body id="top" className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col">
         {children}
       </body>
     </html>

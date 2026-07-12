@@ -1,5 +1,4 @@
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://michal.dev";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://michal.dev";
 
 export const email = "michalschneedorfer@gmail.com";
 
@@ -21,7 +20,7 @@ export const navLinks = [
 export const metrics = [
   { label: "years_shipping", value: "4+" },
   { label: "english", value: "C1 fluent" },
-  { label: "products_shipped", value: "7+" },
+  { label: "products_shipped", value: "9+" },
   { label: "education", value: "MSc CS" },
 ];
 
@@ -32,6 +31,7 @@ export type Project = {
   description: string;
   metric: string;
   stack?: string;
+  links?: { label: string; href: string }[];
 };
 
 export const projects: Project[] = [
@@ -42,7 +42,11 @@ export const projects: Project[] = [
     description:
       "Interactive financial-literacy platform used in 3,700+ schools. Real-time interactive presentations over WebSockets, a custom slide-based CMS with live preview, and the public blog/newsfeed with an editorial workflow for non-technical staff.",
     metric: "18,500+ users · ~65% of Czech schools",
-    stack: "Next.js / Nest.js / React / WebSockets",
+    stack: "Next.js / Nest.js / React / Payload / WebSockets",
+    links: [
+      { label: "skoala.cz ↗", href: "https://skoala.cz/" },
+      { label: "blog ↗", href: "https://skoala.cz/blog" },
+    ],
   },
   {
     number: "02",
@@ -69,6 +73,13 @@ export const projects: Project[] = [
     description:
       "Rewrite of a legacy weld-inspection product with improved UX and AI-supported inspections. Rebuilt the tablet inspection app including a real-time probe-alignment tool, plus the manager platform — graphs, tables, tablet configuration, and a visual test-plan editor.",
     metric: "AI-supported inspections",
+    stack: "React / TanStack / Canvas",
+    links: [
+      {
+        label: "vsm-technologies.com ↗",
+        href: "https://vsm-technologies.com/en/home-en/",
+      },
+    ],
   },
   {
     number: "05",
@@ -78,6 +89,30 @@ export const projects: Project[] = [
       "Kickstarted a client's tiny house & land marketplace as the sole developer; the product has since grown into a multi-person team.",
     metric: "solo → multi-person team",
     stack: "Next.js / Strapi CMS",
+  },
+];
+
+export type PersonalProject = {
+  title: string;
+  description: string;
+  stack: string;
+  href: string;
+};
+
+export const personalProjects: PersonalProject[] = [
+  {
+    title: "WASM Ludo",
+    description:
+      "Real-time multiplayer ludo game written entirely in Rust — Yew frontend compiled to WebAssembly, Actix backend — communicating over WebSockets.",
+    stack: "Rust / Yew / Actix / WebAssembly",
+    href: "https://github.com/schneedorfer/wasm-ludo",
+  },
+  {
+    title: "Overload",
+    description:
+      "Mobile app for tracking fitness progress — users build training templates to follow, with workout history and statistics.",
+    stack: "React Native / Expo / tRPC / Node.js",
+    href: "https://github.com/schneedorfer/overload",
   },
 ];
 
@@ -123,6 +158,11 @@ export const skillGroups = [
   },
 ];
 
+export const dotfiles = {
+  label: "schneedorfer/.dotfiles",
+  href: "https://github.com/schneedorfer/.dotfiles",
+};
+
 export const workflow = [
   "keyboard-driven Neovim workflow",
   "parallel Claude Code agents",
@@ -135,3 +175,13 @@ export const languages = [
   { name: "English", level: "Fluent (C1)" },
   { name: "Czech", level: "Native" },
 ];
+
+export const vimEditor = {
+  filename: "offer.json",
+  entries: [
+    { key: "name", value: "michal" },
+    { key: "role", value: "fullstack_dev" },
+  ],
+  edit: { key: "team", tease: "???", value: "your_company" },
+  savedMessage: '"offer.json" written',
+} as const;

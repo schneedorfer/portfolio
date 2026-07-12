@@ -1,4 +1,5 @@
 import { email, navLinks } from "@/lib/content";
+import { NavLogo } from "@/components/site/nav-logo";
 import { ThemeToggle } from "@/components/site/theme-toggle";
 import { Button } from "@/components/ui/button";
 
@@ -6,9 +7,7 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-nav-rule bg-background">
       <div className="mx-auto flex max-w-[1160px] items-center justify-between px-5 py-[18px] md:px-12">
-        <a href="#top" className="font-mono text-sm font-semibold tracking-tight">
-          michal.dev
-        </a>
+        <NavLogo />
         <div className="flex items-center gap-5 md:gap-6">
           <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (

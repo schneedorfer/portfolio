@@ -22,10 +22,10 @@ Available for **B2B contract engagements** (Czech-registered sole trader / IČO)
 **Prague, Czech Republic · Sep 2023 – Present**
 Stack: Next.js, React, Nest.js, Hono
 
-- Core contributor to **Skoala** — an **interactive financial-literacy platform** for Česká spořitelna, used by **18,500+ users across 3,700+ schools** (~65% of Czech primary & secondary schools) `[Next.js, Nest.js, React, Vite]`
+- Core contributor to **[Skoala](https://skoala.cz/)** — an **interactive financial-literacy platform** for Česká spořitelna, used by **18,500+ users across 3,700+ schools** (~65% of Czech primary & secondary schools) `[Next.js, Nest.js, React, Vite, Payload]`
   - Integrated real-time presentations with interactive student participation (WebSockets)
   - Built custom CMS with slide-based builder and real-time preview
-  - Built the public blog/newsfeed (Next.js + Payload CMS) with an editorial publishing workflow for non-technical staff
+  - Built the public [blog/newsfeed](https://skoala.cz/blog) (Next.js + Payload CMS) with an editorial publishing workflow for non-technical staff
   - Participated in demos, security audits, and architecture discussions
 - **Log management app** — enterprise log management: routing, transformations, collection `[React, Vite, TanStack Router, React Flow, Go]`
   - Built the core visual graph builder for configuring log flows, similar to n8n
@@ -34,8 +34,8 @@ Stack: Next.js, React, Nest.js, Hono
 - **Projector** — internal AI tool used by the **sales team** to speed up project estimations, feature breakdowns, client briefs, and team setup `[Next.js, Hono, Firebase, Gemini]`
   - Built the file-indexing and **RAG** pipeline on **Gemini File Search**, with custom chunking and metadata tagging (by source and relevance) to control what feeds the AI and MCP context
   - Implemented an **MCP server** exposing the app's features to clients like Claude Code
-- **VOGT Ultrasonics** — rewrite of a legacy weld-inspection product with improved UX and **AI-supported inspections** (partner AI model integration)
-  - Rebuilt the tablet inspection app, incl. a real-time probe-alignment tool for more accurate welds
+- **[VOGT Ultrasonics](https://vsm-technologies.com/en/home-en/)** — rewrite of a legacy weld-inspection product with improved UX and **AI-supported inspections** (partner AI model integration) `[Vite, React, TanStack Router, Canvas]`
+  - Rebuilt the tablet inspection app, incl. a real-time probe-alignment tool (Canvas-based visualization) for more accurate welds
   - Built a manager platform to review results (graphs, tables), configure tablets, and design custom test plans in a visual editor
 - **Kickstarted** a client's **tiny house & land marketplace** as the sole developer — since grown into a multi-person team `[Next.js, Strapi CMS]`
 
@@ -49,6 +49,20 @@ Stack: React
 - Developed tools for **VSD** (energy distributor)
   - Data visualizations (Google Maps, heatmaps, charts), complex tables with filtering
 - Modernized legacy React apps — migrated class components to **hooks**, introduced **TypeScript**, and adopted **Tailwind CSS** as an early adopter
+
+## Personal Projects
+
+### WASM Ludo — real-time multiplayer game in Rust
+
+`[Rust, Yew, Actix, WebAssembly, WebSockets]` · [github.com/schneedorfer/wasm-ludo](https://github.com/schneedorfer/wasm-ludo)
+
+- Real-time multiplayer ludo game written **entirely in Rust** — Yew frontend compiled to **WebAssembly**, Actix backend — communicating over WebSockets
+
+### Overload — mobile fitness tracking app
+
+`[React Native, Expo, tRPC, Node.js]` · [github.com/schneedorfer/overload](https://github.com/schneedorfer/overload)
+
+- Mobile app for tracking fitness progress: users build training templates to follow, with workout history and statistics
 
 ## Education
 
@@ -67,7 +81,7 @@ Stack: React
 
 ### Values & Workflows
 
-- Custom keyboard-driven workflow in Neovim with integrated AI tools for high-speed development
+- Custom keyboard-driven workflow in Neovim with integrated AI tools for high-speed development — fully custom config written in Lua ([github.com/schneedorfer/.dotfiles](https://github.com/schneedorfer/.dotfiles))
 - Runs multiple Claude Code agents in parallel across isolated git worktrees (Worktrunk), with a per-worktree Tmux session
 - Always exploring modern tools, frameworks, and developer workflows
 

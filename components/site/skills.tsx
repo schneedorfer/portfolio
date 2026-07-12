@@ -1,4 +1,4 @@
-import { skillGroups, workflow } from "@/lib/content";
+import { dotfiles, skillGroups, workflow } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { SectionLabel } from "@/components/site/section-label";
 
@@ -51,6 +51,20 @@ export function Skills() {
                 {item}
               </p>
             ))}
+            <p>
+              <span aria-hidden className="text-muted-foreground">
+                →
+              </span>{" "}
+              custom Lua config:{" "}
+              <a
+                href={dotfiles.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {dotfiles.label} ↗
+              </a>
+            </p>
           </div>
         </div>
       </div>
