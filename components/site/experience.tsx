@@ -5,7 +5,7 @@ export function Experience() {
   return (
     <section id="exp" className="scroll-mt-[70px] border-b border-hairline">
       <div className="mx-auto max-w-[1160px] px-5 py-16 md:px-12">
-        <SectionLabel>02 — experience</SectionLabel>
+        <SectionLabel>02 / experience</SectionLabel>
         {experience.map((job) => (
           <div
             key={job.role}

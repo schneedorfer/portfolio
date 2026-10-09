@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Michal Schneedorfer — Fullstack Developer";
+const title = "Michal Schneedorfer · Fullstack Developer";
 const description =
-  "Fullstack developer with 5+ years shipping production web apps — React, Next.js, Node.js. Available for B2B contract engagements.";
+  "Fullstack developer with 5+ years building production web apps with React, Next.js and Node.js. Open to remote roles and B2B contracts.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

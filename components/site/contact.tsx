@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <section>
       <div className="mx-auto max-w-[1160px] px-5 py-[72px] md:px-12">
-        <SectionLabel>06 — contact</SectionLabel>
+        <SectionLabel>06 / contact</SectionLabel>
         <h3 className="max-w-[760px] text-[32px] font-semibold tracking-[-0.03em] md:text-[44px]">
           Available for remote roles &amp; B2B contracts.
         </h3>

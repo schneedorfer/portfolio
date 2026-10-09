@@ -13,14 +13,23 @@ export function Hero() {
               Michal Schneedorfer
             </h1>
             <p className="mt-3 text-[22px] leading-[1.2] font-medium tracking-[-0.02em] text-fg2 md:text-[28px]">
-              Building production web apps end-to-end.
+              I build production web apps, front to back.
             </p>
             <p className="mt-7 max-w-[560px] text-[17px] leading-[1.6] text-fg2">
-              5+ years shipping for enterprise and startup clients —
-              architecture to delivery, solo or embedded in cross-functional
-              teams. Comfortable as the sole engineer, and a mentor in larger
-              ones.
+              5+ years building for banks, enterprises and startups. I take
+              features from architecture to release, either on my own or
+              inside a larger team, where I also mentor others.
             </p>
+            <a
+              href="#work"
+              className="mt-6 inline-flex items-center gap-2 font-mono text-[13px] text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <span
+                aria-hidden
+                className="size-[7px] rounded-full bg-accent-green"
+              />
+              now running creavu, my own product in production →
+            </a>
           </div>
           <div className="flex flex-col gap-4">
             <div className="border border-strong px-5 py-[18px]">

@@ -24,6 +24,22 @@ export const metrics = [
   { label: "education", value: "MSc CS" },
 ];
 
+export const featuredProject = {
+  title: "creavu",
+  tagline: "my own product · live in production",
+  description:
+    "A platform where creators sell posts, files and video from a single page, as one-off purchases or monthly memberships. Buyers pay with just an email, no account needed. I built it on my own, from product spec to production.",
+  highlights: [
+    "Payments and creator payouts with Stripe Connect",
+    "Paid video that only buyers can play, via signed streams",
+    "Guest checkout: the purchase creates the account",
+    "Czech and English, prices in CZK, EUR or USD",
+  ],
+  metric: "built and run solo · live with real payments",
+  stack: "Next.js / Hono / Drizzle / Postgres / Stripe Connect / Better Auth / Turborepo",
+  links: [{ label: "creavu.co ↗", href: "https://creavu.co" }],
+};
+
 export type Project = {
   number: string;
   title: string;
@@ -40,7 +56,7 @@ export const projects: Project[] = [
     title: "Skoala",
     client: "Česká spořitelna (largest Czech bank)",
     description:
-      "Interactive financial-literacy platform used in 3,700+ schools. Real-time interactive presentations over WebSockets, a custom slide-based CMS with live preview, and the public blog/newsfeed with an editorial workflow for non-technical staff.",
+      "A financial literacy platform used in 3,700+ Czech schools. I built live interactive presentations over WebSockets, a slide-based CMS with live preview, and the public blog with a publishing workflow for non-technical editors.",
     metric: "18,500+ users · ~65% of Czech schools",
     stack: "Next.js / Nest.js / React / Payload / WebSockets",
     links: [
@@ -53,7 +69,7 @@ export const projects: Project[] = [
     title: "Log Management Platform",
     client: "enterprise client",
     description:
-      "Core visual graph builder for log flows — routing, transformations, collection, n8n-style — plus a dynamic form engine rendering complex forms from backend JSON Schema. Drove a spec-driven, AI-assisted workflow that shipped features ~2× faster than estimated.",
+      "An enterprise tool for collecting, routing and transforming logs. I built the visual editor for log flows (similar to n8n) and a form engine that renders complex forms from backend JSON Schema. I also introduced a spec-driven, AI-assisted workflow that shipped features about 2× faster than estimated.",
     metric: "~2× faster than estimate",
     stack: "React / React Flow / TanStack / Go",
   },
@@ -62,7 +78,7 @@ export const projects: Project[] = [
     title: "Projector",
     client: "internal AI tool",
     description:
-      "AI tool the sales team uses to speed up project estimations, feature breakdowns, client briefs, and team setup. Built the file-indexing and RAG pipeline on Gemini File Search — custom chunking and metadata tagging control what feeds the AI.",
+      "An internal AI tool that helps the sales team estimate projects, break down features and write client briefs. I built the file indexing and RAG pipeline on Gemini File Search, with custom chunking and metadata to control what the AI sees, plus an MCP server so Claude Code can use the app.",
     metric: "MCP server for Claude Code",
     stack: "Next.js / Hono / Firebase / Gemini",
   },
@@ -71,7 +87,7 @@ export const projects: Project[] = [
     title: "Weld Inspection Platform",
     client: "VOGT Ultrasonics",
     description:
-      "Rewrite of a legacy weld-inspection product with improved UX and AI-supported inspections. Rebuilt the tablet inspection app including a real-time probe-alignment tool, plus the manager platform — graphs, tables, tablet configuration, and a visual test-plan editor.",
+      "A rewrite of a legacy weld inspection product, with better UX and AI-assisted inspections. I rebuilt the tablet app, including a real-time probe alignment tool, and the manager platform for reviewing results, configuring tablets and designing test plans visually.",
     metric: "AI-supported inspections",
     stack: "React / TanStack / Canvas",
     links: [
@@ -86,7 +102,7 @@ export const projects: Project[] = [
     title: "Tiny House Marketplace",
     client: "startup client",
     description:
-      "Kickstarted a client's tiny house & land marketplace as the sole developer; the product has since grown into a multi-person team.",
+      "I started a client's marketplace for tiny houses and land as the only developer. The product has since grown and now has a full team behind it.",
     metric: "solo → multi-person team",
     stack: "Next.js / Strapi CMS",
   },
@@ -103,14 +119,14 @@ export const personalProjects: PersonalProject[] = [
   {
     title: "WASM Ludo",
     description:
-      "Real-time multiplayer ludo game written entirely in Rust — Yew frontend compiled to WebAssembly, Actix backend — communicating over WebSockets.",
+      "A real-time multiplayer ludo game written fully in Rust. Yew frontend compiled to WebAssembly, Actix backend, WebSockets in between.",
     stack: "Rust / Yew / Actix / WebAssembly",
     href: "https://github.com/schneedorfer/wasm-ludo",
   },
   {
     title: "Overload",
     description:
-      "Mobile app for tracking fitness progress — users build training templates to follow, with workout history and statistics.",
+      "A mobile app for tracking workouts. Build training templates, follow them, and see your history and stats.",
     stack: "React Native / Expo / tRPC / Node.js",
     href: "https://github.com/schneedorfer/overload",
   },
@@ -120,14 +136,14 @@ export const experience = [
   {
     role: "Fullstack Developer · Applifting",
     summary:
-      "Fullstack across banking education, enterprise log management, internal AI tooling, and industrial inspection — kickstarted a client marketplace solo. Mentor within teams; client demos, security audits, architecture discussions, and talks at company-hosted public events.",
-    dates: ["Sep 2023 — Present", "Prague, CZ"],
+      "Fullstack work for banking education, enterprise log management, internal AI tools and industrial inspection. Started a client marketplace on my own. I mentor teammates, run client demos, take part in security audits and architecture decisions, and give talks at public company events.",
+    dates: ["Sep 2023 → Present", "Prague, CZ"],
   },
   {
     role: "Frontend Developer · inQool",
     summary:
-      "Admin systems for Charles University — document management, ID cards with a payment gateway. Data visualizations (maps, heatmaps, charts) and complex filtered tables for an energy distributor. Often the sole developer; modernized legacy React with hooks and TypeScript, early Tailwind adopter.",
-    dates: ["Aug 2021 — Jan 2023", "Brno, CZ"],
+      "Admin systems for Charles University, including document management and student ID cards with online payments. Maps, heatmaps, charts and filterable tables for an energy distributor. Often the only developer on a project. Moved legacy React apps to hooks and TypeScript and adopted Tailwind early.",
+    dates: ["Aug 2021 → Jan 2023", "Brno, CZ"],
   },
 ];
 
@@ -149,8 +165,15 @@ export const skillGroups = [
     ],
   },
   {
-    label: "ai",
-    skills: ["RAG pipelines", "MCP servers", "Claude Code", "Gemini"],
+    label: "ai workflow",
+    skills: [
+      "Claude Code",
+      "Parallel agents",
+      "Git worktrees (Worktrunk)",
+      "Tmux",
+      "MCP servers",
+      "Spec-driven dev",
+    ],
   },
   {
     label: "testing & devops",

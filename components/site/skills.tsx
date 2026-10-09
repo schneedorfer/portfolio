@@ -10,7 +10,7 @@ export function Skills() {
           id="skills"
           className="scroll-mt-[70px] px-5 pt-16 pb-10 md:border-r md:border-hairline md:px-12 md:pb-16"
         >
-          <SectionLabel>03 — skills</SectionLabel>
+          <SectionLabel>03 / skills</SectionLabel>
           <div className="grid gap-5">
             {skillGroups.map((group) => (
               <div key={group.label}>
@@ -35,7 +35,7 @@ export function Skills() {
           </div>
         </div>
         <div className="border-t border-hairline px-5 pt-10 pb-16 md:border-t-0 md:px-12 md:pt-16">
-          <SectionLabel>04 — how_i_work</SectionLabel>
+          <SectionLabel>04 / how_i_work</SectionLabel>
           <div className="font-mono text-[13px] leading-[1.9] text-fg2">
             <p>
               <span aria-hidden className="text-muted-foreground">

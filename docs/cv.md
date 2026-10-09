@@ -52,6 +52,15 @@ Stack: React
 
 ## Personal Projects
 
+### creavu, creator platform (live in production)
+
+`[Next.js, Hono, Drizzle, Postgres, Stripe Connect, Better Auth, Turborepo]` · [creavu.co](https://creavu.co) · Aug 2026 - Present
+
+- Platform where creators sell posts, files and video from one page, as one-off purchases or monthly memberships. Designed, built and run **solo**, live in production with real payments
+- Payments and automatic creator payouts with Stripe Connect; guest checkout with just an email, where the purchase creates the account
+- Paid video that only buyers can play, through signed streams (Bunny Stream); Czech and English, prices in CZK, EUR or USD
+- Turborepo monorepo with typed server actions, Better Auth, Vitest + Playwright tests and preview deploys on Vercel
+
 ### WASM Ludo — real-time multiplayer game in Rust
 
 `[Rust, Yew, Actix, WebAssembly, WebSockets]` · [github.com/schneedorfer/wasm-ludo](https://github.com/schneedorfer/wasm-ludo)
