@@ -20,7 +20,7 @@ export const navLinks = [
 export const metrics = [
   { label: "years_shipping", value: "5+" },
   { label: "english", value: "C1 fluent" },
-  { label: "products_shipped", value: "9+" },
+  { label: "products_shipped", value: "10+" },
   { label: "education", value: "MSc CS" },
 ];
 
